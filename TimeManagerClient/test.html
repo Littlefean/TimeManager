@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .testBox {
+            width: 300px;
+            height: 300px;
+            margin: 30px auto;
+            outline: solid 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .putBox {
+            position: absolute;
+            width: 100%;
+            background-color: red;
+        }
+
+        canvas {
+            outline: solid 1px;
+        }
+    </style>
+</head>
+<body>
+<button class="get">get</button>
+<button class="get2">get2</button>
+</body>
+
+<!--<script src="test.js"></script>-->
+<script>
+    let PORT = 10007;
+    let ADDRESS = "localhost";
+    document.querySelector(".get").onclick = function () {
+        console.log("开始访问网页")
+
+        let oAjax = new XMLHttpRequest();
+        oAjax.open("GET", `http://${ADDRESS}:${PORT}/timeManager`);
+        oAjax.setRequestHeader("Content-Type", "application/json");
+        oAjax.send();
+        oAjax.onload = () => {
+            console.log(oAjax.responseText);
+        }
+    }
+    document.querySelector(".get2").onclick = function () {
+        console.log("开始访问网页")
+
+        let oAjax = new XMLHttpRequest();
+        oAjax.open("GET", `http://${ADDRESS}:${PORT}/`);
+        oAjax.setRequestHeader("Content-Type", "application/json");
+        oAjax.send();
+        oAjax.onload = () => {
+            console.log(oAjax.responseText);
+        }
+    }
+</script>
+</html>

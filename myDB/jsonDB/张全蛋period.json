@@ -1,0 +1,158 @@
+[
+  {
+    "start": "12:2",
+    "dur": "12:2",
+    "week": "1",
+    "date": "2022.7.5",
+    "obj": {
+      "name": "英语",
+      "color": "rgba(255, 0, 255, 1)",
+      "fontColor": "rgba(255, 255, 255, 1)"
+    },
+    "disable": false
+  },
+  {
+    "start": "7:9",
+    "dur": "1:2",
+    "week": "5",
+    "date": "2022.7.9",
+    "obj": {
+      "name": "政治",
+      "color": "rgba(255, 255, 0, 1)",
+      "fontColor": "rgba(255, 0, 0, 1)"
+    },
+    "disable": false
+  },
+  {
+    "start": "16:58",
+    "dur": "3:11",
+    "week": "4",
+    "date": "2022.7.8",
+    "obj": {
+      "name": "英语",
+      "color": "rgba(255, 0, 255, 1)",
+      "fontColor": "rgba(255, 255, 255, 1)"
+    },
+    "disable": false
+  },
+  {
+    "start": "20:28",
+    "dur": "3:44",
+    "week": "5",
+    "date": "2022.7.9",
+    "obj": {
+      "name": "数学",
+      "color": "rgba(0, 0, 255, 1)",
+      "fontColor": "rgba(255, 255, 255, 1)"
+    },
+    "disable": false
+  },
+  {
+    "start": "8:54",
+    "dur": "3:40",
+    "week": "2",
+    "date": "?",
+    "obj": {
+      "name": "英语",
+      "color": "rgba(255, 0, 255, 1)",
+      "fontColor": "rgba(255, 255, 255, 1)"
+    },
+    "disable": false
+  },
+  {
+    "start": "15:31",
+    "dur": "0:0",
+    "week": "4",
+    "date": "?",
+    "obj": {
+      "name": "吃饭",
+      "color": "rgb(153, 215, 18)",
+      "fontColor": "rgb(168, 79, 0)"
+    },
+    "disable": false
+  },
+  {
+    "start": "15:9",
+    "dur": "0:0",
+    "week": "3",
+    "date": "2022.7.14",
+    "obj": {
+      "name": "吃饭",
+      "color": "rgb(153, 215, 18)",
+      "fontColor": "rgb(168, 79, 0)"
+    },
+    "disable": false
+  },
+  {
+    "start": "14:0",
+    "dur": "0:0",
+    "week": "4",
+    "date": "2022.7.15",
+    "obj": {
+      "name": "政治",
+      "color": "rgba(255, 255, 0, 1)",
+      "fontColor": "rgba(255, 0, 0, 1)"
+    },
+    "disable": false
+  },
+  {
+    "start": "14:4",
+    "dur": "0:0",
+    "week": "3",
+    "date": "2022.7.14",
+    "obj": {
+      "name": "数学",
+      "color": "rgba(0, 0, 255, 1)",
+      "fontColor": "rgba(255, 255, 255, 1)"
+    },
+    "disable": false
+  },
+  {
+    "start": "15:23",
+    "dur": "0:0",
+    "week": "4",
+    "date": "2022.7.15",
+    "obj": {
+      "name": "吃饭",
+      "color": "rgb(153, 215, 18)",
+      "fontColor": "rgb(168, 79, 0)"
+    },
+    "disable": false
+  },
+  {
+    "start": "9:4",
+    "dur": "3:44",
+    "week": "2",
+    "date": "2022.7.6",
+    "obj": {
+      "name": "政治",
+      "color": "rgba(255, 255, 0, 1)",
+      "fontColor": "rgba(255, 0, 0, 1)"
+    },
+    "disable": false
+  },
+  {
+    "start": "10:25",
+    "dur": "4:9",
+    "week": "0",
+    "date": "2022.7.4",
+    "obj": {
+      "name": "政治",
+      "color": "#fbff00",
+      "fontColor": "#ff0000"
+    },
+    "disable": false
+  },
+  {
+    "start": "7:21",
+    "dur": "2:47",
+    "week": "3",
+    "date": "2022.7.14",
+    "obj": {
+      "name": "政治",
+      "color": "#fbff00",
+      "fontColor": "#ff0000"
+    },
+    "disable": false
+  }
+]

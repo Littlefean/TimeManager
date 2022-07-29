@@ -1,0 +1,1 @@
+[{"name": "dsfsdf ds", "weekList": ["周二", "周三", "周四"], "startTime": "00:59", "alarm": true}, {"name": "测试", "weekList": ["周二", "周日"], "startTime": "06:30", "alarm": false}, {"name": "测试2", "weekList": ["周二", "周四", "周日"], "startTime": "10:31", "alarm": false}]

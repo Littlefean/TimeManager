@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style class="jsControlCss"></style>
+</head>
+<body>
+<div class="loginView">
+    <div class="loginArea">
+        <h1>时间管理APP</h1>
+        <h1>登录</h1>
+        <label>
+            <span>用户名</span>
+            <input type="text" class="loginUserName">
+            <span>密码</span>
+            <input type="password" class="loginUserPassword">
+            <button class="loginBtn">登录</button>
+            <button class="regAreaBtn">注册用户</button>
+        </label>
+        <div class="loginNote">
+            <h3>温馨提示</h3>
+            <p>这是一个时间管理app网页端</p>
+            <p>您输入的密码会被转成哈希值存到服务器上</p>
+            <p>没有人会通过一串哈希值来看透你的密码是什么</p>
+            <p>理论上来讲哈希值是很难被破解的</p>
+            <p>但是如果您设置了一个过于简单的密码</p>
+            <p>过于简单的密码的哈希值可能会被暴力破解</p>
+            <p>服务器如果被攻破之后可能会造成密码泄露问题</p>
+            <p>所以介于安全考虑，建议输入的密码包含英文数字，稍微复杂一些</p>
+            <p>一般来讲服务器是不会被攻击的。这里只是写一个以防万一。</p>
+        </div>
+    </div>
+    <div class="regArea">
+        <h1>时间管理APP</h1>
+        <h1>注册</h1>
+        <label>
+            <span>用户名</span>
+            <input type="text" class="userRegName">
+            <span>密码</span>
+            <input type="password" class="userRegPassword1">
+            <span>确认密码</span>
+            <input type="password" class="userRegPassword2">
+            <span>邮箱</span>
+            <input type="email" placeholder="提醒功能会用得上" class="userRegEmail">
+            <button class="regBtn">确认注册</button>
+            <button class="loginAreaBtn">不注册，登录</button>
+        </label>
+    </div>
+</div>
+
+<div class="topView">
+
+    <!--时间管理页面-->
+    <div class="view v1">
+        <div class="topArea v1TopArea">
+            <div class="titleLine">时间记录表
+                <button class="leftPageBtn">&lt;</button>
+                <button class="rightPageBtn">&gt;</button>
+            </div>
+            <div class="lineBtn">
+                <div class="btn setModeBtn">设置活动分类</div>
+                <div class="btn modeChangeBtn">手动添加时段</div>
+                <!--                <div class="btn">自动开始计时</div>-->
+            </div>
+        </div>
+        <div class="page">
+            <div class="ruler"></div>
+            <div class="table">
+
+                <div class="alertChangeMode alertPanel" style="display: none">
+
+                    <h2>新建一种新的时间种类</h2>
+                    <h4>输入名称</h4>
+                    <label>
+                        <input type="text" class="KindTitle">
+                    </label>
+                    <h4>设置填充颜色</h4>
+                    <label>
+                        <input type="color" class="fillColor">
+                    </label>
+                    <h4>设置边框颜色</h4>
+                    <label>
+                        <input type="color" class="borderColor">
+                    </label>
+                    <button class="timeModeAdd">确认添加</button>
+                    <button class="cancelAdd">取消添加</button>
+                </div>
+
+                <div class="alertAddTime alertPanel" style="display: none">
+                    <h2>选择添加的时间类型</h2>
+                    <div class="addMenu"></div>
+                    <button class="cancelAdd">取消添加</button>
+                </div>
+
+                <div class="alertModifyTime alertPanel" style="display: none">
+                    <h2>设置这个时间段</h2>
+                    <div class="detail">
+                        <div class="name">数学</div>
+                        <h4>起始时间</h4>
+                        <div class="timeContent startTime">6:30</div>
+<!--                        <h4>结束时间</h4>-->
+<!--                        <div class="timeContent endTime">6:50</div>-->
+                        <h4>持续时长</h4>
+                        <div class="timeContent durTime">0:20</div>
+                    </div>
+                    <button class="cancelModify">取消修改</button>
+                    <button class="delThis">删除</button>
+                </div>
+
+                <div class="marginT"></div>
+
+                <canvas class="tableBgCanvas"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!--周常和倒数日-->
+    <div class="view v2">
+        <!--上区域-->
+        <div class="check topArea">
+            <div class="checkItem checkItem1">周常事件</div>
+            <div class="checkItem checkItem2">倒数日</div>
+        </div>
+        <!--下区域-->
+        <div class="v3Area bottomArea">
+            <!--周常事件-->
+            <div class="checkItemArea checkItemArea1" style="display: block">
+                <button class="addBtn addWeekEventBtn">添加周常事件</button>
+                <div class="addWeekEventAlert" style="display: block">
+                    <h2>周常事件名字</h2>
+                    <input type="text" class="title">
+                    <h2>都在哪周出现</h2>
+                    <input type="checkbox" class="weekChoice" value="周一"><span>周一</span>
+                    <input type="checkbox" class="weekChoice" value="周二"><span>周二</span>
+                    <input type="checkbox" class="weekChoice" value="周三"><span>周三</span>
+                    <input type="checkbox" class="weekChoice" value="周四"><span>周四</span>
+                    <input type="checkbox" class="weekChoice" value="周五"><span>周五</span>
+                    <input type="checkbox" class="weekChoice" value="周六"><span>周六</span>
+                    <input type="checkbox" class="weekChoice" value="周日"><span>周日</span>
+                    <h2>几点开始</h2>
+                    <input type="time" class="timeInput">
+                    <h2>是否提醒</h2>
+                    <input type="radio" class="alarmChoice" value="是">
+                    <span>是</span>
+                    <button class="addBtnOk">确认添加</button>
+                    <button class="addCancel">取消添加</button>
+                </div>
+
+                <div class="items weekEventItems">
+                    <!--                    <div class="item">-->
+                    <!--                        <div class="eventName">打leetcode周赛</div>-->
+                    <!--                        <div class="time">每周日上午10点</div>-->
+                    <!--                        <div class="note">🔔</div>-->
+                    <!--                        <div class="del">❎</div>-->
+                    <!--                    </div>-->
+                    <!--                    <div class="item">-->
+                    <!--                        <div class="eventName">上水课</div>-->
+                    <!--                        <div class="time">每周三15:00</div>-->
+                    <!--                        <div class="note">🔔</div>-->
+                    <!--                        <div class="del">❎</div>-->
+                    <!--                    </div>-->
+                </div>
+
+            </div>
+            <!--倒数日-->
+            <div class="checkItemArea checkItemArea2" style="display: none">
+                <button class="addBtn addDDLBtn">添加倒数日</button>
+                <div class="addDDLAlert" style="display: none">
+                    <h2>倒数日名字</h2>
+                    <input type="text" class="title">
+                    <h2>倒数日日期</h2>
+                    <input type="date" class="dateInput">
+                    <button class="addBtnOk">确认添加</button>
+                    <button class="addCancel">取消添加</button>
+                </div>
+                <div class="items DDLItems">
+                    <!--                    <div class="item">-->
+                    <!--                        <div class="dayName">考研</div>-->
+                    <!--                        <div class="noteWords">还有 <span class="finalDay">65</span> 天</div>-->
+                    <!--                        <div class="del">❎</div>-->
+                    <!--                    </div>-->
+                    <!--                    <div class="item">-->
+                    <!--                        <div class="dayName">2022年底</div>-->
+                    <!--                        <div class="noteWords">还有 <span class="finalDay">154</span> 天</div>-->
+                    <!--                        <div class="del">❎</div>-->
+                    <!--                    </div>-->
+                    <!--                    <div class="item">-->
+                    <!--                        <div class="dayName">六级</div>-->
+                    <!--                        <div class="noteWords">还有 <span class="finalDay">155</span> 天</div>-->
+                    <!--                        <div class="del">❎</div>-->
+                    <!--                    </div>-->
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="view v3">
+        <div class="check topArea">
+            <div class="checkItem checkItem1">总结反思</div>
+            <div class="checkItem checkItem2">灵感</div>
+        </div>
+        <div class="v3Area bottomArea">
+            <div class="inputArea">
+                <div class="inputBox" contenteditable="true" aria-placeholder="请输入"></div>
+                <div class="btnLine">
+                    <div class="lineBtn clear">清空❎</div>
+                    <div class="lineBtn submit">提交✅</div>
+                </div>
+            </div>
+            <!--总结-->
+            <div class="checkItemArea1 checkItemArea">
+                <!--                <div class="item">-->
+                <!--                    <div class="time">2019-15-6</div>-->
+                <!--                    <div class="content">-->
+                <!--                        我今天吃了两碗饭，感觉身体好好-->
+                <!--                    </div>-->
+                <!--                    <div class="edit">✍</div>-->
+                <!--                    <div class="del">❎</div>-->
+                <!--                </div>-->
+            </div>
+            <!--反思-->
+            <div class="checkItemArea checkItemArea2">
+                <!--                <div class="item">-->
+                <!--                    <div class="time">2019-15-6</div>-->
+                <!--                    <div class="content">-->
+                <!--                        我今天吃了两碗饭，感觉身体好好-->
+                <!--                    </div>-->
+                <!--                    <div class="edit">✍</div>-->
+                <!--                    <div class="del">❎</div>-->
+                <!--                </div>-->
+                <!--            </div>-->
+            </div>
+        </div>
+
+
+
+    </div>
+    <!--    我的 设置界面-->
+    <div class="view v4">
+        <p class="firstLine">用户名： <span id="userName"></span></p>
+        <h2>设置主题</h2>
+        <div class="choiceStyle">
+            <div class="style s1">浅粉主题</div>
+            <div class="style s2">浅蓝主题</div>
+            <div class="style s3">淡黄主题</div>
+            <div class="style s4">夜间主题</div>
+        </div>
+        <h2>管理时间种类</h2>
+        <p class="note">添加时间种类在时间表面板添加</p>
+        <div class="timeKind">
+<!--                        <div class="time">-->
+<!--                            <div class="name">政治</div>-->
+<!--                            <div class="del">❎</div>-->
+<!--                        </div>-->
+<!--                        <div class="time">-->
+<!--                            <div class="name">英语</div>-->
+<!--                            <div class="del">❎</div>-->
+<!--                        </div>-->
+
+        </div>
+        <button class="changeAccount">切换账号</button>
+    </div>
+</div>
+
+<div class="downMenu">
+    <div class="item menuBtn1">
+        <img src="" alt="">
+        <p>时间记录</p>
+    </div>
+    <div class="item menuBtn2">
+        <img src="" alt="">
+        <p>周常&倒数日</p>
+    </div>
+    <div class="item menuBtn3">
+        <img src="" alt="">
+        <p>总结&灵感</p>
+    </div>
+    <div class="item menuBtn4">
+        <img src="" alt="">
+        <p>我的&设置</p>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="js/tools.js"></script>
+<script src="js/staticData.js"></script>
+<script src="js/myDate.js"></script>
+<script src="js/timePeriod.js"></script>
+<script src="js/myElement.js"></script>
+<script src="js/myItems.js"></script>
+<script src="js/userSettings.js"></script>
+<script src="js/canvasTimeTable.js"></script>
+<script src="js/userLoad.js"></script>
+<script src="js/index.js"></script>
+<script src="js/login.js"></script>
+<script src="js/register.js"></script>

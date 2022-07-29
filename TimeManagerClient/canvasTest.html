@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas {
+            /*outline: solid 1px;*/
+        }
+    </style>
+</head>
+<body>
+<canvas></canvas>
+</body>
+</html>
+
+<script src="js/tools.js"></script>
+<script>
+    let can = document.querySelector(`canvas`);
+    let ctx = can.getContext("2d");
+
+    // ctx.translate(0.5, 0.5);
+    let N = window.devicePixelRatio;
+
+    let W = 5;
+    let H = 5;
+
+    can.width = W;
+    can.height = H;
+    console.log(W * N);
+
+    can.width = W * N;
+    can.height = H * N;
+    ctx.translate(0.5 * N, 0.5 * N);
+    // console.log(can.width, can.height);
+    can.style.width = `${W}px`;
+    can.style.height = `${H}px`;
+
+    drawRectFill(ctx, 0, 0, 100, 100, "red");
+    drawLine(ctx, 0, 0, 0, H * N, "black");
+    drawLine(ctx, 0, 0, 0, H * N, "black");
+    drawLine(ctx, 2 * N, 0, 2 * N, H * N, "black");
+</script>

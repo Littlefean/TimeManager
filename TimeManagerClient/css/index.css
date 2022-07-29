@@ -1,0 +1,439 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.inputLine {
+  line-height: 2em;
+  padding: 2px 10px 2px 10px;
+  border-radius: 1000px;
+}
+.lineBtn {
+  line-height: 2em;
+  padding: 2px 10px 2px 10px;
+  border-radius: 1000px;
+}
+@font-face {
+  font-family: "Cha";
+  src: url("../fonts/STZHONGS.TTF");
+}
+@font-face {
+  font-family: "ChaL";
+  src: url("../fonts/shuXinTi.ttf");
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+  line-height: 2em;
+  font-family: "Cha", serif;
+}
+body {
+  position: relative;
+  overflow: hidden;
+}
+body .loginView {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fad9eb;
+  z-index: 100;
+  text-align: center;
+  overflow-y: scroll;
+}
+body .loginView span,
+body .loginView button {
+  display: block;
+  line-height: 2em;
+}
+body .loginView button {
+  margin: 10px auto;
+  line-height: 2em;
+  padding: 2px 10px 2px 10px;
+  border-radius: 1000px;
+}
+body .loginView input {
+  line-height: 2em;
+  padding: 2px 10px 2px 10px;
+  border-radius: 1000px;
+}
+body .loginView .loginNote {
+  line-height: 2em;
+  margin: 5px;
+  padding: 5px;
+}
+body .topView {
+  height: 90vh;
+  width: 400%;
+  position: relative;
+  left: -100%;
+  top: 0;
+  transition: all 0.4s;
+}
+body .topView .view {
+  width: 25%;
+  height: 100%;
+  float: left;
+}
+body .topView .topArea {
+  height: 50px;
+}
+body .topView .topArea .checkItem {
+  float: left;
+  width: 50%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-family: "Cha", serif;
+  font-size: 20px;
+}
+body .topView .bottomArea {
+  padding: 20px 10px 200px 10px;
+}
+body .topView .v1 .topArea {
+  height: 60px;
+}
+body .topView .v1 .topArea .titleLine {
+  position: relative;
+  height: 30px;
+  width: 100%;
+  line-height: 30px;
+  text-align: center;
+  font-family: "Cha", serif;
+}
+body .topView .v1 .topArea .titleLine button {
+  position: absolute;
+  width: 50px;
+  font-size: 20px;
+  height: 30px;
+  border-radius: 1000px;
+}
+body .topView .v1 .topArea .titleLine .leftPageBtn {
+  left: 30px;
+}
+body .topView .v1 .topArea .titleLine .rightPageBtn {
+  right: 30px;
+}
+body .topView .v1 .topArea .lineBtn {
+  height: 30px;
+  text-align: center;
+}
+body .topView .v1 .topArea .lineBtn .btn {
+  display: inline-block;
+  height: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  line-height: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 100px;
+}
+body .topView .v1 .page {
+  height: 500px;
+}
+body .topView .v1 .page .ruler,
+body .topView .v1 .page .table {
+  float: left;
+  height: 100%;
+}
+body .topView .v1 .page .ruler .marginT,
+body .topView .v1 .page .table .marginT {
+  height: 30px;
+}
+body .topView .v1 .page .ruler {
+  width: 10%;
+}
+body .topView .v1 .page .ruler .block {
+  height: 4.16666667%;
+  width: 100%;
+  border-top: solid 1px;
+  text-align: center;
+}
+body .topView .v1 .page .ruler .block .num {
+  width: 20px;
+  display: inline-block;
+  font-size: 10px;
+  transform: translateY(-12px);
+  background-color: lightgoldenrodyellow;
+}
+body .topView .v1 .page .table {
+  width: 90%;
+  height: 100%;
+  position: relative;
+}
+body .topView .v1 .page .table .alertPanel {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 5;
+}
+body .topView .v1 .page .table .alertPanel h2 {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+body .topView .v1 .page .table .alertPanel button {
+  display: block;
+  margin: 10px auto;
+  font-size: 20px;
+  line-height: 2em;
+  height: 2em;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 1000px;
+}
+body .topView .v1 .page .table .alertModifyTime .detail {
+  width: 60%;
+  margin: 20px auto;
+  height: 70%;
+  border: solid 1px white;
+  border-radius: 30px;
+  padding: 10px;
+  overflow-y: scroll;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 50%;
+}
+body .topView .v1 .page .table .alertModifyTime .detail .name {
+  text-align: center;
+  font-family: "Cha", serif;
+}
+body .topView .v1 .page .table .alertModifyTime .detail .timeContent {
+  text-align: center;
+}
+body .topView .v1 .page .table .alertChangeMode {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+body .topView .v1 .page .table .alertAddTime .addMenu {
+  width: 60%;
+  margin: 20px auto;
+  height: 70%;
+  border: solid 1px white;
+  border-radius: 30px;
+  padding: 10px;
+  overflow-y: scroll;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+body .topView .v1 .page .table .alertAddTime .addMenu .kind {
+  height: 2em;
+  line-height: 2em;
+  margin: 20px;
+  text-align: center;
+  border: solid 2px;
+  border-radius: 1000px;
+  font-family: "Cha", serif;
+}
+body .topView .v1 .page .table .marginT .titleBlock {
+  float: left;
+  height: 100%;
+  width: 14.28571429%;
+}
+body .topView .v1 .page .table .marginT .titleBlock .weekTitle,
+body .topView .v1 .page .table .marginT .titleBlock .dateTitle {
+  font-size: 9px;
+  text-align: center;
+}
+body .topView .v1 .page .table .dayCol {
+  width: 14.28571429%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+}
+body .topView .v1 .page .table .tableBgCanvas {
+  position: absolute;
+  z-index: 1;
+}
+body .topView .v2 {
+  overflow-y: scroll;
+}
+body .topView .v2 .bottomArea .checkItemArea .addBtn {
+  display: block;
+  margin: 5px auto;
+  line-height: 2em;
+  font-family: "Cha", serif;
+  font-size: 22px;
+  padding: 0 20px 0 20px;
+  border-radius: 1000px;
+}
+body .topView .v2 .bottomArea .checkItemArea .addDDLAlert {
+  text-align: center;
+}
+body .topView .v2 .bottomArea .checkItemArea .addDDLAlert input {
+  display: block;
+  margin: 5px auto;
+}
+body .topView .v2 .bottomArea .checkItemArea .item {
+  position: relative;
+  padding: 10px 0 10px 20px;
+  margin-bottom: 15px;
+}
+body .topView .v2 .bottomArea .checkItemArea .item .eventName {
+  font-family: "Cha", serif;
+  font-size: 25px;
+}
+body .topView .v2 .bottomArea .checkItemArea .item .note,
+body .topView .v2 .bottomArea .checkItemArea .item .del {
+  position: absolute;
+  top: 0;
+  font-size: 23px;
+}
+body .topView .v2 .bottomArea .checkItemArea .item .note {
+  right: 40px;
+  filter: brightness(50%);
+}
+body .topView .v2 .bottomArea .checkItemArea .item .dayName {
+  font-family: "Cha", serif;
+  font-size: 25px;
+  text-align: center;
+}
+body .topView .v2 .bottomArea .checkItemArea .item .noteWords {
+  font-family: "Cha", serif;
+  text-align: center;
+  font-size: 22px;
+}
+body .topView .v2 .bottomArea .checkItemArea .item .noteWords .finalDay {
+  color: red;
+  font-family: "ChaL", serif;
+  font-weight: bolder;
+}
+body .topView .v2 .bottomArea .checkItemArea .item .del {
+  right: 0;
+  filter: hue-rotate(248deg);
+}
+body .topView .v3 {
+  overflow-y: scroll;
+}
+body .topView .v3 .topArea {
+  height: 50px;
+}
+body .topView .v3 .topArea .checkItem {
+  float: left;
+  width: 50%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-family: "Cha", serif;
+  color: black;
+  font-size: 20px;
+}
+body .topView .v3 .bottomArea {
+  padding: 20px 10px 200px 10px;
+}
+body .topView .v3 .bottomArea .inputArea {
+  padding: 10px;
+}
+body .topView .v3 .bottomArea .inputArea .inputBox {
+  text-indent: 2em;
+  font-family: "ChaL", serif;
+  font-weight: bolder;
+  line-height: 2em;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px 5px 20px 5px;
+}
+body .topView .v3 .bottomArea .inputArea .inputBox:empty:before {
+  content: '写点什么吧';
+  color: gray;
+}
+body .topView .v3 .bottomArea .inputArea .btnLine {
+  text-align: center;
+  overflow: hidden;
+}
+body .topView .v3 .bottomArea .inputArea .btnLine .lineBtn {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 20px 5px 20px;
+}
+body .topView .v3 .bottomArea .checkItemArea {
+  overflow: hidden;
+}
+body .topView .v3 .bottomArea .checkItemArea .item {
+  margin: 20px;
+  position: relative;
+}
+body .topView .v3 .bottomArea .checkItemArea .item .time {
+  text-align: center;
+  font-family: "Cha", serif;
+}
+body .topView .v3 .bottomArea .checkItemArea .item .content {
+  text-indent: 2em;
+  font-family: "ChaL", serif;
+  font-weight: bolder;
+  line-height: 2em;
+}
+body .topView .v3 .bottomArea .checkItemArea .item .edit,
+body .topView .v3 .bottomArea .checkItemArea .item .del {
+  position: absolute;
+  font-family: "Cha", serif;
+}
+body .topView .v3 .bottomArea .checkItemArea .item .edit {
+  right: 30px;
+  top: 0;
+}
+body .topView .v3 .bottomArea .checkItemArea .item .del {
+  right: 0;
+  top: 0;
+  filter: hue-rotate(248deg);
+}
+body .topView .v4 {
+  overflow-y: scroll;
+}
+body .topView .v4 .firstLine {
+  line-height: 2em;
+  text-align: center;
+  font-family: "Cha", serif;
+  font-size: 22px;
+}
+body .topView .v4 .choiceStyle .style {
+  margin: 20px auto;
+  text-align: center;
+  width: 60%;
+  border-radius: 1000px;
+  line-height: 2em;
+}
+body .topView .v4 .note {
+  text-align: center;
+  line-height: 2em;
+}
+body .topView .v4 .timeKind .time {
+  margin: 10px auto;
+  width: 60%;
+  position: relative;
+}
+body .topView .v4 .timeKind .time .name {
+  text-align: center;
+  line-height: 2em;
+  margin: 0 auto;
+}
+body .topView .v4 .timeKind .time .del {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+body .topView .v4 .changeAccount {
+  display: block;
+  margin: 20px auto;
+  border-radius: 500px;
+  line-height: 2em;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+body .downMenu {
+  height: 10vh;
+  background-color: gray;
+}
+body .downMenu .item {
+  float: left;
+  width: 25%;
+  height: 100%;
+}
+body .downMenu .item p {
+  text-align: center;
+}
+/*# sourceMappingURL=index.css.map */
